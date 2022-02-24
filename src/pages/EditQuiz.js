@@ -367,9 +367,10 @@ function EditQuiz(props) {
   const handleDelete = async () => {
     let token = localStorage.getItem('authToken');
     let url = `https://mcqpsm.online/quiz/delete`;
-
+    let captcha = await executeRecaptcha('quiz_delete');
     let data = {
       quizId: quizId,
+      captcha: captcha,
     };
 
     try {
@@ -606,7 +607,7 @@ function EditQuiz(props) {
     return (
       <Container className="edit-quiz-page">
         <Typography variant="h3" className="dash-head p-top edit-quiz-head">
-          Edit Quiz
+          Edit MCQs
         </Typography>
         <div className="edit-btn-bar">
           <Button
@@ -622,7 +623,7 @@ function EditQuiz(props) {
             onClick={handleDeleteBtn}
           >
             <Delete className="edit-icon" />
-            Delete Quiz
+            Delete MCQs
           </Button>
           {quizDetails.quizStatus === 1 ? (
             <Button
@@ -673,7 +674,7 @@ function EditQuiz(props) {
           </Typography>
           {quizDetails.quizType === 'private' ? (
             <Typography variant="h6" className="quiz-detail-param">
-              Quiz Code:{' '}
+              Test Code:{' '}
               <span className="quiz-detail-text">{quizDetails.quizCode}</span>
             </Typography>
           ) : null}

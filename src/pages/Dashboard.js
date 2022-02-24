@@ -153,8 +153,8 @@ function Dashboard(props) {
               variant="fullWidth"
               aria-label="full width tabs dashboard"
             >
-              <Tab label="Quizzes" />
-              <Tab label={userType === 'admin' ? 'Your Quizzes' : 'History'} />
+              <Tab label="MCQs" />
+              <Tab label={userType === 'admin' ? 'Your MCQs' : 'History'} />
               <Tab label="Profile" />
             </Tabs>
           </AppBar>
@@ -182,7 +182,7 @@ function Dashboard(props) {
             severity="error"
             onClose={() => setBlockSnack(false)}
           >
-            You violated the quiz rules!
+            You violated the rules!
           </Alert>
         </Snackbar>
         <Snackbar
@@ -195,7 +195,7 @@ function Dashboard(props) {
             severity="error"
             onClose={() => setTimeUpSnack(false)}
           >
-            Time's Up! Your quiz was not submitted!
+            Time's Up! Your MCQ was not submitted!
           </Alert>
         </Snackbar>
         <Snackbar
@@ -208,7 +208,7 @@ function Dashboard(props) {
             severity="error"
             onClose={() => setEmptySnack(false)}
           >
-            There are no questions in the quiz.
+            There are no questions in the MCQs.
           </Alert>
         </Snackbar>
       </Container>

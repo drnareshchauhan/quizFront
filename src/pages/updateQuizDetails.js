@@ -135,7 +135,7 @@ function UpdateQuizDetails(props) {
       <Container className="create-quiz-page">
         <div className="create-form">
           <Typography variant="h4" className="create-head">
-            Quiz Details
+            MCQs Details
           </Typography>
           <div className="create-form-inputs">
             <TextInput
@@ -176,9 +176,9 @@ function UpdateQuizDetails(props) {
             <Slider
               defaultValue={5}
               aria-labelledby="quiz time slider"
-              step={5}
+              step={10}
               min={5}
-              max={60}
+              max={180}
               valueLabelDisplay="on"
               marks
               className="time-slider"

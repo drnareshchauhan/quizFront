@@ -71,7 +71,7 @@ function HistorySection(props) {
       <div className="history-section">
         {quizzes.length === 0 ? (
           <p style={{ textAlign: 'center' }}>
-            You have not created any quizzes yet!
+            You have not created any MCQs yet!
           </p>
         ) : (
           <GridList cols={getCols()} className="grid-list">
@@ -104,7 +104,7 @@ function HistorySection(props) {
       <div className="history-section">
         {profile.quizzesGiven.length === 0 ? (
           <p style={{ textAlign: 'center' }}>
-            You have not given any quizzes yet!
+            You have not given any MCQs yet!
           </p>
         ) : (
           <List aria-label="quiz display" className="owner-quiz-list">

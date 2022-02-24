@@ -163,7 +163,7 @@ function OwnerQuizDetails(props) {
     return (
       <Container className="edit-quiz-page">
         <Typography variant="h3" className="dash-head p-top edit-quiz-head">
-          Quiz Details
+          MCQs Details
         </Typography>
         <div className="edit-btn-bar">
           <Button
@@ -171,7 +171,7 @@ function OwnerQuizDetails(props) {
             onClick={handleDeleteBtn}
           >
             <Delete className="edit-icon" />
-            Delete Quiz
+            Delete MCQs
           </Button>
         </div>
         <div className="quiz-details-sec">
@@ -203,7 +203,7 @@ function OwnerQuizDetails(props) {
           </Typography>
           {quizDetails.quizType === 'private' ? (
             <Typography variant="h6" className="quiz-detail-param">
-              Quiz Code:{' '}
+              Test Code:{' '}
               <span className="quiz-detail-text">{quizDetails.quizCode}</span>
             </Typography>
           ) : null}

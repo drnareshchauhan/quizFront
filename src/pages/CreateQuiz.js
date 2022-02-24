@@ -112,12 +112,12 @@ function CreateQuiz() {
       <Container className="create-quiz-page">
         <div className="create-form">
           <Typography variant="h4" className="create-head">
-            Quiz Details
+            MCQs Details
           </Typography>
           <div className="create-form-inputs">
             <TextInput
               variant="outlined"
-              label="Quiz Name"
+              label="MCQs Name"
               value={quizName}
               onChange={onQuizNameChange}
               name="Quiz Name"
@@ -132,7 +132,7 @@ function CreateQuiz() {
                     variant="inline"
                     format="MM/dd/yyyy"
                     margin="normal"
-                    label="Select Quiz Date"
+                    label="Select Test Date"
                     value={quizDate}
                     onChange={handleDateChange}
                   />
@@ -143,7 +143,7 @@ function CreateQuiz() {
                     format="hh:mm:ss aa"
                     views={['hours', 'minutes', 'seconds']}
                     margin="normal"
-                    label="Select Quiz Start Time"
+                    label="Select Test Start Time"
                     value={quizDate}
                     onChange={handleDateChange}
                     keyboardIcon={<AccessAlarm />}
@@ -152,21 +152,21 @@ function CreateQuiz() {
               </Grid>
             </MuiPickersUtilsProvider>
             <p style={{ marginTop: '5%', marginBottom: '5%' }}>
-              Quiz Time (in minutes):
+              Test Time (in minutes):
             </p>
             <Slider
               defaultValue={5}
               aria-labelledby="quiz time slider"
-              step={5}
+              step={10}
               min={5}
-              max={60}
+              max={180}
               valueLabelDisplay="on"
               marks
               className="time-slider"
               value={duration}
               onChange={handleTimeChange}
             />
-            <p>Select quiz type: </p>
+            <p>Select session type: </p>
             <Select
               value={type}
               onChange={onTypeChange}
@@ -177,11 +177,11 @@ function CreateQuiz() {
             </Select>
 
             <Button className="login-btn create-btn" onClick={handleSubmit}>
-              Create Quiz
+              Create MCQs
             </Button>
             <Typography variant="subtitle1" className="create-subtitle">
-              NOTE: After creating the quiz, you can add questions by editing
-              the quiz in YOUR QUIZZES section of the dashboard.
+              NOTE: After creating the MCQs, you can add questions by editing
+              the MCQ in YOUR MCQs section of the dashboard.
             </Typography>
           </div>
         </div>

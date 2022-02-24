@@ -376,7 +376,7 @@ function QuizzesSection(props) {
           {userType === 'user' ? (
             <Button className="join-quiz-btn" onClick={onJoinClick}>
               <Check />
-              Join a Quiz
+              Join a MCQs
             </Button>
           ) : null}
           {userType === 'admin' ? (
@@ -386,18 +386,18 @@ function QuizzesSection(props) {
               to="/createQuiz"
             >
               <Add />
-              Create a quiz
+              Create a MCQs
             </Button>
           ) : null}
         </div>
         {userType === 'user' ? (
           <div className="enrolled-list">
             <Typography variant="h5" className="up-quizzes">
-              Enrolled Quizzes
+              Enrolled MCQs
             </Typography>
             {quizzesEnrolled.length === 0 ? (
               <p style={{ textAlign: 'center' }}>
-                Sorry! No quizzes available at the moment!
+                Sorry! No mcqs available at the moment!
               </p>
             ) : (
               <div className="quiz-list root1">
@@ -436,11 +436,11 @@ function QuizzesSection(props) {
           </div>
         ) : null}
         <Typography variant="h5" className="up-quizzes">
-          Upcoming Quizzes
+          Upcoming MCQs
         </Typography>
         {quizzes.length === 0 ? (
           <p style={{ textAlign: 'center' }}>
-            Sorry! No quizzes available at the moment!
+            Sorry! No MCQs available at the moment!
           </p>
         ) : (
           <div className="quiz-list root1">
@@ -495,15 +495,15 @@ function QuizzesSection(props) {
                 }}
               >
                 <Typography variant="h5" className="type-head">
-                  JOIN A PRIVATE QUIZ
+                  JOIN A PRIVATE SESSION
                 </Typography>
                 <Typography variant="h6" className="type-head join-sub">
-                  Enter the code of the quiz you want to join
+                  Enter the code of the TEST you want to join
                 </Typography>
                 <TextInput
                   error={quizCodeError}
                   helperText={quizCodeError ? 'Required' : null}
-                  label="Quiz Code"
+                  label="Test Code"
                   variant="outlined"
                   value={quizCode}
                   onChange={handleJoinChange}
@@ -731,7 +731,7 @@ function QuizzesSection(props) {
             severity="error"
             onClose={() => setPrivateWrongCode(false)}
           >
-            This quiz code does not exists!
+            This test code does not exists!
           </Alert>
         </Snackbar>
         <Snackbar

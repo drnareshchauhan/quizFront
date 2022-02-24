@@ -294,7 +294,7 @@ function LoginPage(props) {
           Login
         </Button>
         <Link to={`/register/${type}`} className="link register-link">
-          Don't have an account? Join the Quizzie now!
+          Don't have an account? Join the pSmCQ now!
         </Link>
       </div>
     </Container>
