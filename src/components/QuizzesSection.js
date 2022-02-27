@@ -605,7 +605,7 @@ function QuizzesSection(props) {
           style={{ width: '100%' }}
         >
           <DialogTitle style={{ textAlign: 'center', fontWeight: 'bold' }}>
-            Quiz Info
+            Session Info
           </DialogTitle>
 
           {/* From the profile section */}
